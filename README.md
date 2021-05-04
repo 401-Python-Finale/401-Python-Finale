@@ -1,5 +1,7 @@
-# 401-Python-Finale
-A REACT front end with a Django backend culminates our Code Fellows learning
+# Team TDTM
+There are so many different kinds of social media platforms out there. Why can't devs have one??? Talk Dev to Me is a mix of discord,facebook and dial up AOL. A place where Devs can connect and meet other Devs.
+
+A REACT front end with a Django backend
 
 Team members: Ashley Casimir, Bhagirath Bhatt, Kim Damalas, Nick Dorkins
 
