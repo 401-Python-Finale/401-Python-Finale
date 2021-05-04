@@ -33,3 +33,20 @@ Domain models (front and back end):
 Software Requirements:
 
 [Software Requirements Doc](./requirements.md)
+
+-------------
+Database Requirements:
+
+- One table to store user profile information
+    - username
+    - password
+    - languages/skills
+    - links
+
+
+- One table to store user posts
+    - title
+    - text information
+    - owned by
+    
+
