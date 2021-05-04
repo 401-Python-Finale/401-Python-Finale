@@ -24,9 +24,9 @@
 
 #### OUT
 
-- Direct messager or message sender
+- Direct messenger or message sender
 - Collab app
--
+
 
 ### Minimum Viable Product (MVP)
 
