@@ -39,16 +39,6 @@ Software Requirements:
 -------------
 Database Requirements:
 
-- One table to store user profile information
-    - username
-    - password
-    - languages/skills
-    - links
-
-
-- One table to store user posts
-    - title
-    - text information
-    - owned by
+![ERD](./assets/ERD.png)
     
 
