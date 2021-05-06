@@ -27,7 +27,6 @@ export default function LoginForm({ onSubmit }) {
       <Head>
         <title>Log In</title>
         <link rel="icon" href="" />
-        {/* from https://css-tricks.com/emojis-as-favicons/ */}
       </Head>
       <Header title="Talk Dev to Me" />
       <form onSubmit={submitHandler} className="">

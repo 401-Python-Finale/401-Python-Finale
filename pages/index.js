@@ -26,11 +26,5 @@ export default function Home() {
       </div>
     );
 
-  return (
-    <CookieStandAdmin
-      username={username}
-      token={token}
-      onLogout={logoutHandler}
-    />
-  );
+  return <Admin username={username} token={token} onLogout={logoutHandler} />;
 }
