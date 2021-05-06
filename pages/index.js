@@ -1,16 +1,36 @@
-import Head from "next/head";
+import { useState } from "react";
+import { getToken } from "../services/data-fetcher";
+import LoginForm from "../components/login";
 
 export default function Home() {
+  const [token, setToken] = useState();
+
+  const [username, setUsername] = useState("");
+
+  async function loginHandler(values) {
+    const fetchedToken = await getToken(values);
+
+    setToken(fetchedToken);
+
+    setUsername(values.username);
+  }
+
+  function logoutHandler() {
+    setToken(null);
+  }
+
+  if (!token)
+    return (
+      <div className="">
+        <LoginForm onSubmit={loginHandler} />
+      </div>
+    );
+
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen py-2">
-      <Head>
-        <title>Create Next App</title>
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
-
-      <main className="flex flex-col items-center justify-center flex-1 px-20 text-center"></main>
-
-      <footer className="flex items-center justify-center w-full h-24 border-t"></footer>
-    </div>
+    <CookieStandAdmin
+      username={username}
+      token={token}
+      onLogout={logoutHandler}
+    />
   );
 }
