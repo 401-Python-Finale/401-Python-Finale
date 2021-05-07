@@ -1,5 +1,6 @@
 import Header from "../components/header";
 import Head from "next/head";
+import Link from "next/link";
 import { useState } from "react";
 
 export default function LoginForm({ onSubmit }) {
@@ -18,6 +19,10 @@ export default function LoginForm({ onSubmit }) {
 
   function inputChangeHandler(event) {
     let { name, value } = event.target;
+
+    function signUpChangeHandler(event) {
+      let { name, value } = event.target;
+    }
 
     setValues({ ...values, [name]: value });
   }
@@ -60,6 +65,9 @@ export default function LoginForm({ onSubmit }) {
           Sign In
         </button>
       </form>
+      <Link href="signup" className="">
+        Sign up
+      </Link>
     </div>
   );
 }
