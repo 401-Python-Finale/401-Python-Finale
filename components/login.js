@@ -1,6 +1,7 @@
 import Header from "../components/header";
 import Head from "next/head";
 import Link from "next/link";
+// import Logo from "..assets/placeholder.png";
 import { useState } from "react";
 
 export default function LoginForm({ onSubmit }) {
@@ -20,10 +21,6 @@ export default function LoginForm({ onSubmit }) {
   function inputChangeHandler(event) {
     let { name, value } = event.target;
 
-    function signUpChangeHandler(event) {
-      let { name, value } = event.target;
-    }
-
     setValues({ ...values, [name]: value });
   }
 
@@ -33,7 +30,10 @@ export default function LoginForm({ onSubmit }) {
         <title>Log In</title>
         <link rel="icon" href="" />
       </Head>
-      <Header title="Talk Dev to Me" />
+      <div>
+        <h2>Talk Dev to Me</h2>
+        {/* <img src={logo} alt="our logo" /> */}
+      </div>
       <form onSubmit={submitHandler} className="">
         <div className="">
           <label htmlFor="username">User Name</label>
@@ -67,6 +67,9 @@ export default function LoginForm({ onSubmit }) {
       </form>
       <Link href="signup" className="">
         Sign up
+      </Link>
+      <Link href="about" className="">
+        Meet the Makers
       </Link>
     </div>
   );

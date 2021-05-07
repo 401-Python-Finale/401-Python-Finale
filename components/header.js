@@ -11,7 +11,7 @@ export default function Header({ username, onLogout }) {
             {username && <a onClick={onLogout}>Sign Out</a>}
           </button>
         </Link>
-        <Link href="/overview">
+        <Link href="/">
           <button className="">
             <a>Logout</a>
           </button>

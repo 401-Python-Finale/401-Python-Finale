@@ -1,8 +1,9 @@
 import { useState } from "react";
 import { getToken } from "../services/data-fetcher";
 import LoginForm from "../components/login";
+import Footer from "../components/footer";
 
-export default function Home() {
+export default function LandingPage() {
   const [token, setToken] = useState();
 
   const [username, setUsername] = useState("");
@@ -22,7 +23,12 @@ export default function Home() {
   if (!token)
     return (
       <div className="">
-        <LoginForm onSubmit={loginHandler} />
+        <div className="">
+          <LoginForm onSubmit={loginHandler} />
+        </div>
+        <div className="">
+          <Footer />
+        </div>
       </div>
     );
 
