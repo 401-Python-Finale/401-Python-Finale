@@ -11,11 +11,20 @@ export default function Header({ username, onLogout }) {
             {username && <a onClick={onLogout}>Sign Out</a>}
           </button>
         </Link>
-        {/* <Link href="/">
+
+        <Link href="/profile">
           <button className="">
-            <a>Logout</a>
+            {<a>Your Profile</a>}
           </button>
-        </Link> */}
+        </Link>
+
+        <Link href="/home">
+          <button className="">
+            {<a>Your Feed</a>}
+          </button>
+        </Link>
+
+  
       </div>
     </header>
   );
