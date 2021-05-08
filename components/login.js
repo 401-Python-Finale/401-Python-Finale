@@ -1,7 +1,6 @@
 import Header from "../components/header";
 import Head from "next/head";
 import Link from "next/link";
-// import Logo from "..assets/placeholder.png";
 import { useState } from "react";
 
 export default function LoginForm({ onSubmit }) {
@@ -32,7 +31,7 @@ export default function LoginForm({ onSubmit }) {
       </Head>
       <div>
         <h2>Talk Dev to Me</h2>
-        {/* <img src={logo} alt="our logo" /> */}
+        <img src={"/static/images/construction.jpg"} alt="our logo" />
       </div>
       <form onSubmit={submitHandler} className="">
         <div className="">

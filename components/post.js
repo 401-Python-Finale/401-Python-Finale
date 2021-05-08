@@ -4,7 +4,6 @@ export default function PostForm() {
     return (
         <div>
             <div>
-                <h2>What's On Your Mind?</h2>
             </div>
             <form onSubmit="submit" className="">
                 <div className="">
@@ -13,7 +12,7 @@ export default function PostForm() {
                         type="text"
                         name="post"
                         id="post"
-                        placeholder="Type Here"
+                        placeholder="What's On Your Mind?"
                         className=""
                     />
                     <button type="submit" className="">
