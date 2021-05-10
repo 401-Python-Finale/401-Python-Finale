@@ -13,7 +13,7 @@ export default function Home() {
         <div>
 
             <Header title="Talk Dev To Me" username="ashcas" />
-            <img src={"/static/images/construction.jpg"} alt="our logo" />
+            <img src={"/static/images/tdtm_logo.png"} alt="our logo" />
             <Languages />
             <PostForm />
 
