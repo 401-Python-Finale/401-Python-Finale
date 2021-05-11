@@ -9,7 +9,6 @@ module.exports = {
       'gray': '#D7D4CF',
       'dark-blue':'#104F7F',
     }
-    // extend: {},
   },
   variants: {
     extend: {},
