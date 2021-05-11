@@ -7,12 +7,19 @@ import Feed from "../components/feed";
 export default function Home() {
   return (
     <div>
-      <Header title="Talk Dev To Me" username="ashcas" />
+      <div className="">
+        <Header title="Talk Dev To Me" username="ashcas" />
+      </div>
+      <div className="h-10">
+      {/* Spacing div */}
+      </div>
 
-      <PostForm />
-
-      <Feed />
-
+      <div className="ml-48 flex justify-between">
+        <PostForm />
+        <div>
+          <Feed />
+        </div>
+      </div>
 
       <Footer />
     </div>

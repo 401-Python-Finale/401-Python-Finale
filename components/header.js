@@ -2,12 +2,14 @@ import Link from "next/link";
 
 export default function Header({ username, onLogout }) {
   return (
-    <header className="">
-          <img src={"/static/images/tdtm_logo.png"} alt="our logo" class="mt-8 ml-8 w-1/12" />
+    <header className="mx-8 my-8">
+          <img src={"/static/images/tdtm_logo.png"} alt="our logo" className="mt-8 m-8 w-1/12 mb-8" />
 
-        <div className="grid grid-cols-10 divide-x divide-transparent ml-96 -mt-24">
+        <div className="grid grid-cols-10 ml-96 -mt-24 border-b-2">
           <p className="-ml-48 h-10 text-xl text-dark-blue">Hi, {username}</p>
           {/* Move grid columns to end of doc */}
+          <div></div>
+          <div></div>
           <div></div>
           <div></div>
           <div></div>
