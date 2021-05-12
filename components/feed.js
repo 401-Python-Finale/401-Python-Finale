@@ -38,15 +38,15 @@ export default function Feed() {
 
 
     return feedItems.map((item) => (
-        <div className="mr-24" >
-            <section className="border-b-2 border-gray max-h-48">
-                <p className="text-left text-lg text-dark-blue pt-4">[ {item.title} ]</p>
-                <p className="pb-4">{item.date}</p>
+        <div className="m-8 mt-0" >
+            <section className="">
+                <p className="text-left text-base md:text-xl lg:text-xl xl:text-xl text-dark-blue">[ {item.title} ]</p>
+                <p className="mb-4 text-base md:text-xl lg:text-xl xl:text-xl">{item.date}</p>
 
 
-                <p key = {item.id} className="pb-4 h-1/6">
-                    {item.body}
-                </p>
+                <p key = {item.id} className="h-24 overflow-y-auto text-base md:text-xl lg:text-xl xl:text-xl pb-4">
+                    {item.body} <br></br> __________________________</p>
+
             </section>
         </div>
     ));

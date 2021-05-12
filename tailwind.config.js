@@ -15,10 +15,13 @@ module.exports = {
       'base-blue': '#1B75BC',
       'gray': '#EDEDED',
       'dark-blue':'#104F7F',
+      'white':'#FFFFFF',
     }
   },
   variants: {
     extend: {},
   },
-  plugins: [],
+  plugins: [
+    require('tailwind-scrollbar-hide')
+  ],
 }
