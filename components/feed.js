@@ -39,7 +39,7 @@ export default function Feed() {
 
     return feedItems.map((item) => (
         <div className="mr-24" >
-            <section className="border-b-2 max-h-48">
+            <section className="border-b-2 border-gray max-h-48">
                 <p className="text-left text-lg text-dark-blue pt-4">[ {item.title} ]</p>
                 <p className="pb-4">{item.date}</p>
 

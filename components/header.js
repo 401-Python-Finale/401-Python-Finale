@@ -5,7 +5,7 @@ export default function Header({ username, onLogout }) {
     <header className="m-8">
           <img src={"/static/images/tdtm_logo.png"} alt="our logo" className="mt-8 m-8 w-1/12 mb-8" />
 
-        <div className="grid grid-cols-10 ml-96 -mt-24 border-b-2">
+        <div className="grid grid-cols-10 ml-96 -mt-24 border-gray">
           <p className="-ml-48 h-10 text-xl text-dark-blue">Hi, {username}</p>
           {/* Move grid columns to end of doc */}
           <div></div>

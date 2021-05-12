@@ -16,7 +16,7 @@ export default function Home() {
           <div><PostForm /></div>
           <div><Feed /></div>
 
-        <div className="object-left-bottom">
+        <div className="">
           <Footer />
         </div>
         </div>

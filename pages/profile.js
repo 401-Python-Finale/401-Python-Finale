@@ -13,7 +13,9 @@ export default function Home() {
         <div>
 
             <Header title="Talk Dev To Me" username="ashcas" />
-            <img src={"/static/images/tdtm_logo.png"} alt="our logo" />
+            <div className="ml-16 mr-16">
+            <img src={"/static/images/abstract-bg-image-blue.jpeg"} alt="our logo" className="object-top w-full h-48"/>
+            </div>
             <Languages />
             <PostForm />
 
