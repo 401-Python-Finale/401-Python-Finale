@@ -6,22 +6,20 @@ import Feed from "../components/feed";
 
 export default function Home() {
   return (
-    <div>
-      <div className="">
-        <Header title="Talk Dev To Me" username="ashcas" />
-      </div>
-      <div className="h-10">
-      {/* Spacing div */}
-      </div>
-
-      <div className="ml-48 flex justify-between">
-        <PostForm />
-        <div>
-          <Feed />
+    <div className="h-screen">
+        <div className="">
+          <Header title="Talk Dev To Me" username="ashcas" />
         </div>
-      </div>
 
-      <Footer />
+{/* Main Page div */}
+        <div className="grid grid-cols-2">
+          <div><PostForm /></div>
+          <div><Feed /></div>
+
+        <div className="object-left-bottom">
+          <Footer />
+        </div>
+        </div>
     </div>
   );
 }
