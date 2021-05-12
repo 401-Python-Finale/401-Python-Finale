@@ -12,14 +12,12 @@ export default function Home() {
         </div>
 
 {/* Main Page div */}
-        <div className="grid grid-cols-2">
-          <div><PostForm /></div>
+          <div className=""><PostForm /></div>
           <div><Feed /></div>
 
         <div className="">
           <Footer />
         </div>
         </div>
-    </div>
   );
 }

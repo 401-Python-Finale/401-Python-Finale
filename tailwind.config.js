@@ -1,7 +1,8 @@
 
 // Media: small device responsive to min-width 600px
 // Media: med device responsive to min-width 768px
-// Media: small device responsive to min-width 992px
+// Media: large device responsive to min-width 992px
+// Media: x-large device responsive to min-width 1280px
 
 
 module.exports = {

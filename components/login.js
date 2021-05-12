@@ -39,7 +39,7 @@ export default function LoginForm({ onSubmit }) {
       <div className="flex">
         {/* Logo and Title section */}
         <div className=" m-4 md:mx-32 md:w-1/3">
-          <img src={"/static/images/tdtm_logo_words.png"} alt="our logo" class="" />
+          <img src={"/static/images/tdtm_logo_words.png"} alt="our logo" className="" />
         </div>
 
         {/* Form Section */}
@@ -53,7 +53,7 @@ export default function LoginForm({ onSubmit }) {
                 value={values.username}
                 onChange={inputChangeHandler}
                 placeholder=""
-                className="mb-8 h-8 lg:ml-9 xl:ml-9 bg-gray pl-3.5 text-sm"
+                className="mb-8 h-8 lg:w-full xl:w-full  bg-gray pl-3.5 text-sm"
               />
 
               <label htmlFor="password" className="text-dark-blue flex-row text-lg" >Password</label>
@@ -64,15 +64,15 @@ export default function LoginForm({ onSubmit }) {
                 value={values.password}
                 onChange={inputChangeHandler}
                 placeholder=""
-                className="mb-4 h-8 lg:ml-12 xl:ml-12 bg-gray pl-3.5 text-sm"
+                className="mb-4 h-8 lg:w-full xl:w-full  bg-gray pl-3.5 text-sm"
               />
               {/* Button Section */}
               <div className="grid grid-cols-2 divide-x divide-dark-blue">
-                <button type="submit" className=" h-10 text-lg text-dark-blue hover:outline-none hover:ring-4 hover:ring-dark-blue hover:ring-opacity-50">
+                <button type="submit" className=" h-10 text-lg lg:ml-12 xl:ml-12 text-dark-blue hover:outline-none hover:ring-4 hover:ring-dark-blue hover:ring-opacity-50">
                   Log In
                 </button>
                 <Link href="signup" >
-                  <a className=" p-1.5 h-10 text-lg lg: text-dark-blue text-center hover:outline-none hover:ring-4 hover:ring-dark-blue hover:ring-opacity-50">Sign Up</a>
+                  <a className=" p-1.5 h-10 text-lg lg:mr-12 xl:mr-12  text-dark-blue text-center hover:outline-none hover:ring-4 hover:ring-dark-blue hover:ring-opacity-50">Sign Up</a>
                 </Link>
               </div>
             </form>
