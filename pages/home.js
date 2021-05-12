@@ -6,15 +6,20 @@ import Feed from "../components/feed";
 
 export default function Home() {
   return (
-    <div>
-      <Header title="Talk Dev To Me" username="ashcas" />
+    <div className="h-screen">
+        <div className="">
+          <Header title="Talk Dev To Me" username="ashcas" />
+        </div>
 
-      <PostForm />
+{/* Main Page div */}
+        <div className="grid grid-cols-2">
+          <div><PostForm /></div>
+          <div><Feed /></div>
 
-      <Feed />
-
-
-      <Footer />
+        <div className="object-left-bottom">
+          <Footer />
+        </div>
+        </div>
     </div>
   );
 }
