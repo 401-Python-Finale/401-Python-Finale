@@ -18,11 +18,15 @@ export class User {
 
 // get a JSON Web Token from server
 export async function getToken(values) {
-  const url = "http://0.0.0.0:8000/api/token/"; // TODO: Update with backend deployed link/token
+  //   const url = "http://0.0.0.0:8000/api/token/";
+  const url =
+    "ec2-18-218-101-248.us-east-2.compute.amazonaws.com:8000/api/token/";
 
   const response = await axios.post(url, values);
 
-  const refreshUrl = "http://0.0.0.0:8000/api/token/refresh/"; // TODO: Update with backend deployed link
+  //   const refreshUrl = "http://0.0.0.0:8000/api/token/refresh/";
+  const refreshUrl =
+    "ec2-18-218-101-248.us-east-2.compute.amazonaws.com:8000/api/token/refresh/";
 
   const refreshResponse = await axios.post(refreshUrl, {
     refresh: response.data.refresh,

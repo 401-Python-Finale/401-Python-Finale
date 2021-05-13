@@ -47,7 +47,7 @@ export default function SignUpForm() {
         <title>Sign Up</title>
         <link rel="icon" href="" />
       </Head>
-      <Header title="Talk Dev to Me" />
+      {/* <Header title="Talk Dev to Me" /> */}
       <form onSubmit={submitHandler} className="">
         <div className="">
           <label htmlFor="fname">First Name</label>
@@ -128,7 +128,7 @@ export default function SignUpForm() {
       </Link>
       <div className="h-24"></div>
       <div className="">
-          <Footer />
+        <Footer />
       </div>
     </div>
   );
