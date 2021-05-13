@@ -1,73 +1,73 @@
-// import axios from "axios";
+import axios from "axios";
 
-// export const apiUrl = ""; // TODO: Update with backend deployed link
+export const apiUrl = ""; // TODO: Update with backend deployed link
 
-// export class User {
-//   constructor(info) {
-//     // TODO: build constructor for info coming in
-//   }
+export class User {
+  constructor(info) {
+    // TODO: build constructor for info coming in
+  }
 
-//   static fromValues(values) {
-//     const info = {
-//       // TODO: Not sure what to do here yet :)
-//     };
+  static fromValues(values) {
+    const info = {
+      // TODO: Not sure what to do here yet :)
+    };
 
-//     return new User(info);
-//   }
-// }
+    return new User(info);
+  }
+}
 
-// // get a JSON Web Token from server
-// export async function getToken(values) {
-//   const url = "{backend api link here}/token/"; // TODO: Update with backend deployed link/token
+// get a JSON Web Token from server
+export async function getToken(values) {
+  const url = "http://0.0.0.0:8000/api/token/"; // TODO: Update with backend deployed link/token
 
-//   const response = await axios.post(url, values);
+  const response = await axios.post(url, values);
 
-//   const refreshUrl = "{backend api link here}/token/refresh"; // TODO: Update with backend deployed link
+  const refreshUrl = "http://0.0.0.0:8000/api/token/refresh/"; // TODO: Update with backend deployed link
 
-//   const refreshResponse = await axios.post(refreshUrl, {
-//     refresh: response.data.refresh,
-//   });
+  const refreshResponse = await axios.post(refreshUrl, {
+    refresh: response.data.refresh,
+  });
 
-//   return refreshResponse.data.access;
-// }
+  return refreshResponse.data.access;
+}
 
-// // GET from API with authentication
-// export async function fetchWithToken(url, token) {
-//   const config = makeConfig(token);
+// GET from API with authentication
+export async function fetchWithToken(url, token) {
+  const config = makeConfig(token);
 
-//   const response = await axios.get(url, config);
+  const response = await axios.get(url, config);
 
-//   const users = response.data.map((info) => new User(info));
+  const users = response.data.map((info) => new User(info));
 
-//   return stands;
-// }
+  return stands;
+}
 
-// // POST to API with authentication
-// export async function postWithToken(token, values) {
-//   const body = {
-//     // TODO: Not yet sure what goes here
-//   };
+// POST to API with authentication
+export async function postWithToken(token, values) {
+  const body = {
+    // TODO: Not yet sure what goes here
+  };
 
-//   const config = makeConfig(token);
+  const config = makeConfig(token);
 
-//   const response = await axios.post(apiUrl, body, config);
+  const response = await axios.post(apiUrl, body, config);
 
-//   return response.data;
-// }
+  return response.data;
+}
 
-// export async function deleteWithToken(id, token) {
-//   const config = makeConfig(token);
+export async function deleteWithToken(id, token) {
+  const config = makeConfig(token);
 
-//   const url = apiUrl + id + "/";
+  const url = apiUrl + id + "/";
 
-//   await axios.delete(url, config);
-// }
+  await axios.delete(url, config);
+}
 
-// // helper function to handle getting Authorization headers EXACTLY right
-// function makeConfig(token) {
-//   return {
-//     headers: {
-//       Authorization: "Bearer " + token,
-//     },
-//   };
-// }
+// helper function to handle getting Authorization headers EXACTLY right
+function makeConfig(token) {
+  return {
+    headers: {
+      Authorization: "Bearer " + token,
+    },
+  };
+}
