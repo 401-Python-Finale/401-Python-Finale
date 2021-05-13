@@ -1,4 +1,4 @@
-import moment from "moment"
+
 
 export default function Feed() {
     const feedItems = [
@@ -26,13 +26,13 @@ export default function Feed() {
             body: "here's some crap.  It's a long block of crap.  You'll notice it goes on foreeeeeeeeeeever.  I'm testing to see how it formatts when it needs to scroll or overflow the box I gave it.  Like I said, a super super super long post but that's ok cuz I'm testing.  It needs to be lonnnnnnnnnnnnnnnnnnnger.  This one needs to be even longerrrrrrrrrrrrrrrrrrrrrrrrrrrrrrr than it is!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!",
         },
 
-    //     {
-    //     id: 4,
-    //     // author: ,
-    //     title: "Some Crap that overflows the page",
-    //     date: moment().format("MMM YYYY"),
-    //     body: "here's some crap.  It's a long block of crap.  You'll notice it goes on foreeeeeeeeeeever.  I'm testing to see how it formatts when it needs to scroll or overflow the box I gave it.  Like I said, a super super super long post but that's ok cuz I'm testing.  It needs to be lonnnnnnnnnnnnnnnnnnnger.  This one needs to be even longerrrrrrrrrrrrrrrrrrrrrrrrrrrrrrr than it is!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!",
-    // },
+        {
+        id: 4,
+        // author: ,
+        title: "Some Crap that overflows the page",
+        date: moment().format("MMM YYYY"),
+        body: "here's some crap.  It's a long block of crap.  You'll notice it goes on foreeeeeeeeeeever.  I'm testing to see how it formatts when it needs to scroll or overflow the box I gave it.  Like I said, a super super super long post but that's ok cuz I'm testing.  It needs to be lonnnnnnnnnnnnnnnnnnnger.  This one needs to be even longerrrrrrrrrrrrrrrrrrrrrrrrrrrrrrr than it is!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!",
+    },
 
     ];
 
