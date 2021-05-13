@@ -42,7 +42,7 @@ export default function SignUpForm() {
   }
 
   return (
-    <div>
+    <div className="">
       <Head>
         <title>Sign Up</title>
         <link rel="icon" href="" />
@@ -126,7 +126,10 @@ export default function SignUpForm() {
       <Link href="about" className="">
         Meet the Makers
       </Link>
-      <Footer />
+      <div className="h-24"></div>
+      <div className="">
+          <Footer />
+      </div>
     </div>
   );
 }

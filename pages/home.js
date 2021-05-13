@@ -7,19 +7,20 @@ import Feed from "../components/feed";
 export default function Home() {
   return (
     <div className="h-screen">
+      <div className="">
+        <Header title="Talk Dev To Me" username="ashcas" />
+      </div>
+
+
+      {/* Main Page div */}
+      <div className="lg:grid lg:grid-cols-2 xl:grid xl:grid-cols-2">
+        <div ><PostForm /></div>
+        <div><Feed /></div>
+
         <div className="">
-          <Header title="Talk Dev To Me" username="ashcas" />
-        </div>
-
-{/* Main Page div */}
-        <div className="grid grid-cols-2">
-          <div><PostForm /></div>
-          <div><Feed /></div>
-
-        <div className="object-left-bottom">
           <Footer />
         </div>
-        </div>
+      </div>
     </div>
   );
 }
