@@ -18,7 +18,7 @@ export default function Home({ token, onLogout, username }) {
 
   useEffect(() => {
     if (!data) return;
-    setPosts(data);
+    setPosts(data.reverse());
   }, [data]);
 
   if (error) return <h2>Something went wrong!</h2>;

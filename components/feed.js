@@ -1,7 +1,6 @@
 import moment from "moment";
 
 export default function Feed({ data }) {
-  console.log(data[0]);
   return data.map((item) => (
     <div className="m-8 mt-0">
       <section className="">
