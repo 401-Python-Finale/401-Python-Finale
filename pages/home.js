@@ -45,6 +45,7 @@ export default function Home({ token, onLogout, username }) {
           title="Talk Dev To Me"
           username={username}
           onLogout={onLogout}
+          token={token}
         />
       </div>
 
