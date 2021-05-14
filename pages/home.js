@@ -21,7 +21,7 @@ export default function Home({ token, onLogout, username }) {
     setPosts(data);
   }, [data]);
 
-  if (error) return <h2>Ruh Roh</h2>;
+  if (error) return <h2>Something went wrong!</h2>;
   if (!data) return <h2>Loading...</h2>;
 
   async function createHandler(values) {
@@ -54,7 +54,7 @@ export default function Home({ token, onLogout, username }) {
           <PostForm onCreate={createHandler} />
         </div>
         <div>
-          <Feed />
+          <Feed data={data} />
         </div>
 
         <div className="">
