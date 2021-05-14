@@ -30,12 +30,14 @@ export async function getToken(values) {
   //   const url =
   //     "http://ec2-18-218-101-248.us-east-2.compute.amazonaws.com:8000/api/token/";
 
+
   const response = await axios.post(url, values);
 
   //   const refreshUrl = "http://0.0.0.0:8000/api/token/refresh/";
   const refreshUrl = "http://127.0.0.1:8000/api/token/refresh/";
   //   const refreshUrl =
   //     "http://ec2-18-218-101-248.us-east-2.compute.amazonaws.com:8000/api/token/refresh/";
+
 
   const refreshResponse = await axios.post(refreshUrl, {
     refresh: response.data.refresh,
