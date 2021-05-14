@@ -9,12 +9,14 @@ export class Post {
   constructor(info) {
     this.id = info.id;
     this.post = info.post;
+    this.created_at = info.created_at;
   }
 
   static fromValues(values) {
     const info = {
       id: -1,
       post: values.post,
+      created_at: values.created_at,
     };
 
     return new Post(info);

@@ -1,6 +1,7 @@
 import moment from "moment";
 
 export default function Feed({ data }) {
+  console.log(data[0]);
   return data.map((item) => (
     <div className="m-8 mt-0">
       <section className="">
@@ -8,7 +9,7 @@ export default function Feed({ data }) {
           [ {item.title} ]
         </p> */}
         <p className="mb-4 text-base md:text-xl lg:text-xl xl:text-xl">
-          {item.updated_at}
+          {item.created_at}
         </p>
 
         <p
