@@ -1,109 +1,104 @@
-// import axios from "axios";
+import axios from "axios";
 
-<<<<<<< Updated upstream
-// export const apiUrl = ""; // TODO: Update with backend deployed link
-=======
+
 // export const apiUrl = "http://0.0.0.0:8000/api/v1/posts/";
 export const apiUrl = "http://127.0.0.1:8000/api/v1/posts/"; // TODO: Update with backend deployed link
 // export const apiUrl =
 //   "https://ec2-18-218-101-248.us-east-2.compute.amazonaws.com:8000/api/v1/user/";
->>>>>>> Stashed changes
+// export const apiUrl = "http://0.0.0.0:8000/api/v1/posts/"; // TODO: Update with backend deployed link
 
-// export class User {
-//   constructor(info) {
-//     // TODO: build constructor for info coming in
-//   }
+export class Post {
+  constructor(info) {
+    this.id = info.id;
+    this.post = info.post;
+  }
 
-//   static fromValues(values) {
-//     const info = {
-//       // TODO: Not sure what to do here yet :)
-//     };
+  static fromValues(values) {
+    const info = {
+      id: -1,
+      post: values.post,
+    };
 
-//     return new User(info);
-//   }
-// }
+    return new Post(info);
+  }
+}
 
 // get a JSON Web Token from server
 export async function getToken(values) {
   //   const url = "http://0.0.0.0:8000/api/token/";
-  const url = "http://127.0.0.1:8000/api/token/";
-  //   const url =
-  //     "https://ec2-18-218-101-248.us-east-2.compute.amazonaws.com:8000/api/token/";
+  //   const url = "http://127.0.0.1:8000/api/token/";
+  const url =
+    "http://ec2-18-218-101-248.us-east-2.compute.amazonaws.com:8000/api/token/";
 
   const response = await axios.post(url, values);
-  console.log(response.data);
 
   //   const refreshUrl = "http://0.0.0.0:8000/api/token/refresh/";
-  const refreshUrl = "http://127.0.0.1:8000/api/token/refresh/";
-  //   const refreshUrl =
-  //     "https://ec2-18-218-101-248.us-east-2.compute.amazonaws.com:8000/api/token/refresh/";
+  //   const refreshUrl = "http://127.0.0.1:8000/api/token/refresh/";
+  const refreshUrl =
+    "http://ec2-18-218-101-248.us-east-2.compute.amazonaws.com:8000/api/token/refresh/";
 
-//   const refreshResponse = await axios.post(refreshUrl, {
-//     refresh: response.data.refresh,
-//   });
+  const refreshResponse = await axios.post(refreshUrl, {
+    refresh: response.data.refresh,
+  });
 
-//   return refreshResponse.data.access;
-// }
+  return refreshResponse.data.access;
+}
 
-// // GET from API with authentication
-// export async function fetchWithToken(url, token) {
-//   const config = makeConfig(token);
+// GET from API with authentication
+export async function fetchPostsWithToken(url, token) {
+  const config = makeConfig(token);
 
-<<<<<<< Updated upstream
-//   const response = await axios.get(url, config);
-=======
+
   const response = await axios.get(url, config);
   console.log(response.data);
->>>>>>> Stashed changes
+  const response = await axios.get(url, config);
 
-//   const users = response.data.map((info) => new User(info));
 
-//   return stands;
-// }
+  const posts = response.data.map((info) => new Post(info));
 
-<<<<<<< Updated upstream
-// // POST to API with authentication
-// export async function postWithToken(token, values) {
-//   const body = {
-//     // TODO: Not yet sure what goes here
-//   };
-=======
+  return posts;
+}
+
+
 // POST to API with authentication
 export async function postWithToken(token, values) {
   const body = {
     author: 1,
     post: values.post,
   };
->>>>>>> Stashed changes
 
-//   const config = makeConfig(token);
+// POST to API with authentication
+export async function postWithToken(token, values) {
+  const body = {
+    post: values.post,
+  };
 
-//   const response = await axios.post(apiUrl, body, config);
+  const config = makeConfig(token);
 
-<<<<<<< Updated upstream
-//   return response.data;
-// }
+  const response = await axios.post(apiUrl, body, config);
 
-// export async function deleteWithToken(id, token) {
-//   const config = makeConfig(token);
-=======
+
   return response;
 }
 
 export async function deletePostWithToken(id, token) {
   const config = makeConfig(token);
->>>>>>> Stashed changes
+  return response.data;
+}
 
-//   const url = apiUrl + id + "/";
+export async function deleteWithToken(id, token) {
+  const config = makeConfig(token);
 
-//   await axios.delete(url, config);
-// }
+  const url = apiUrl + id + "/";
 
-// // helper function to handle getting Authorization headers EXACTLY right
-// function makeConfig(token) {
-//   return {
-//     headers: {
-//       Authorization: "Bearer " + token,
-//     },
-//   };
-// }
+  await axios.delete(url, config);
+}
+
+// helper function to handle getting Authorization headers EXACTLY right
+function makeConfig(token) {
+  return {
+    headers: {
+      Authorization: "Bearer " + token,
+    },
+  };
+}
