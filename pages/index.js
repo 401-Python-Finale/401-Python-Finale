@@ -2,7 +2,6 @@ import { useState } from "react";
 import { getToken } from "../services/data-fetcher";
 import LoginForm from "../components/login";
 import Footer from "../components/footer";
-import Home from "./home";
 
 export default function LandingPage() {
   const [token, setToken] = useState();
