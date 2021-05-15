@@ -24,8 +24,9 @@ let randomSite1 = myArray1[Math.floor(Math.random()*myArray1.length)];
 return(
   <div >
     <div className="h-20"></div>
-    
-    <iframe  title="NewsFeed" src={randomSite1} width="850" height="500"></iframe>
+    <div className="my-4 mx-4 md:mx-16 lg:mx-16 xl:mx-16">
+      <iframe   title="NewsFeed" src={randomSite1} width="600" height="500" ></iframe>
+    </div>
   </div>
 )
 }

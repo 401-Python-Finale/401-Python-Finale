@@ -92,7 +92,7 @@ export default function Home({ token, onLogout, username }) {
         <div>
           <PostForm onCreate={createHandler} />
           <Links />
-          <div className="">
+          <div className="h-20">
             <NewsFeed1 />
           </div>
         </div>
