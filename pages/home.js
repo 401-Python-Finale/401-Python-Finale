@@ -101,10 +101,11 @@ export default function Home({ token, onLogout, username }) {
           <Feed data={data} />
         </div>
 
-        
         <div className="">
+          <div className=""></div>
           <Footer />
         </div>
+        
       </div>
       </div>
   );
