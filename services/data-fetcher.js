@@ -51,7 +51,6 @@ export async function fetchPostsWithToken(url, token) {
   const config = makeConfig(token);
 
   const response = await axios.get(url, config);
-  console.log(response.data);
 
   const posts = response.data.map((info) => new Post(info));
 
@@ -61,7 +60,7 @@ export async function fetchPostsWithToken(url, token) {
 // POST to API with authentication
 export async function postWithToken(token, values) {
   const body = {
-    author: 1,
+    author: 3,
     post: values.post,
   };
 
