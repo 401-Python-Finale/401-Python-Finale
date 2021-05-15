@@ -8,7 +8,7 @@ export default function Feed({ data }) {
           [ {item.title} ]
         </p> */}
         <p className="mb-4 text-base md:text-xl lg:text-xl xl:text-xl">
-          {item.created_at}
+          {moment(item.created_at).format("MM-DD-YYYY")}
         </p>
 
         <p

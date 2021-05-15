@@ -1,9 +1,9 @@
 import axios from "axios";
 
 // export const apiUrl = "http://0.0.0.0:8000/api/v1/posts/"; // TODO: Update with backend deployed link
-export const apiUrl = "http://127.0.0.1:8000/api/v1/posts/";
-// export const apiUrl =
-//   "http://ec2-18-218-101-248.us-east-2.compute.amazonaws.com:8000/api/v1/user/";
+// export const apiUrl = "http://127.0.0.1:8000/api/v1/posts/";
+export const apiUrl =
+  "http://ec2-18-218-101-248.us-east-2.compute.amazonaws.com:8000/api/v1/user/";
 
 export class Post {
   constructor(info) {
@@ -26,17 +26,17 @@ export class Post {
 // get a JSON Web Token from server
 export async function getToken(values) {
   //   const url = "http://0.0.0.0:8000/api/token/";
-  const url = "http://127.0.0.1:8000/api/token/";
-  //   const url =
-  //     "http://ec2-18-218-101-248.us-east-2.compute.amazonaws.com:8000/api/token/";
+  // const url = "http://127.0.0.1:8000/api/token/";
+    const url =
+      "http://ec2-18-218-101-248.us-east-2.compute.amazonaws.com:8000/api/token/";
 
 
   const response = await axios.post(url, values);
 
   //   const refreshUrl = "http://0.0.0.0:8000/api/token/refresh/";
-  const refreshUrl = "http://127.0.0.1:8000/api/token/refresh/";
-  //   const refreshUrl =
-  //     "http://ec2-18-218-101-248.us-east-2.compute.amazonaws.com:8000/api/token/refresh/";
+  // const refreshUrl = "http://127.0.0.1:8000/api/token/refresh/";
+    const refreshUrl =
+      "http://ec2-18-218-101-248.us-east-2.compute.amazonaws.com:8000/api/token/refresh/";
 
 
   const refreshResponse = await axios.post(refreshUrl, {

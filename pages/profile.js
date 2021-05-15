@@ -9,7 +9,7 @@ import { useState, useEffect } from "react";
 import useSWR from "swr";
 import { fetchPostsWithToken, apiUrl } from "../services/data-fetcher";
 
-export default function Profile({ token }) {
+export default function Home({ token }) {
   const { data, error, mutate } = useSWR([apiUrl, token], fetchPostsWithToken);
 
   const [posts, setPosts] = useState([]);
