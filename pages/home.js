@@ -13,6 +13,7 @@ import {
   fetchPostsWithToken,
   apiUrl,
 } from "../services/data-fetcher";
+import NewsFeed1 from "../components/new-feed";
 
 export default function Home({ token, onLogout, username }) {
   const { data, error, mutate } = useSWR([apiUrl, token], fetchPostsWithToken);
@@ -57,32 +58,32 @@ export default function Home({ token, onLogout, username }) {
           <img
             src={"/static/images/cf-logo.png"}
             alt="custom image"
-            className="mx-auto h-32"
+            className="h-32 mx-auto"
           />
           <img
             src={"/static/images/pythonista.png"}
             alt="custom image"
-            className="mx-auto h-32"
+            className="h-32 mx-auto"
           />
           <img
             src={"/static/images/javascript.png"}
             alt="custom image"
-            className="mx-auto h-32"
+            className="h-32 mx-auto"
           />
           <img
             src={"/static/images/tailwind.jpg"}
             alt="custom image"
-            className="mx-auto h-32"
+            className="h-32 mx-auto"
           />
           <img
             src={"/static/images/react.png"}
             alt="custom image"
-            className="mx-auto h-32"
+            className="h-32 mx-auto"
           />
           <img
             src={"/static/images/GitHub-logo.jpeg"}
             alt="custom image"
-            className="mx-auto h-32"
+            className="h-32 mx-auto"
           />
       </div>
         
@@ -91,11 +92,16 @@ export default function Home({ token, onLogout, username }) {
         <div>
           <PostForm onCreate={createHandler} />
           <Links />
+          <div className="">
+            <NewsFeed1 />
+          </div>
         </div>
+
         <div className="">
           <Feed data={data} />
         </div>
 
+        
         <div className="">
           <Footer />
         </div>
