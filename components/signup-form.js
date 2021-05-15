@@ -47,7 +47,6 @@ export default function SignUpForm({ onCreate }) {
         <title>Sign Up</title>
         <link rel="icon" href="" />
       </Head>
-      {/* <Header title="Talk Dev to Me" /> */}
       <form onSubmit={submitHandler} className="">
         <div className="">
           <label htmlFor="fname">First Name</label>

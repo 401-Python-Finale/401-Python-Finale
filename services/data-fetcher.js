@@ -23,7 +23,6 @@ export class Post {
   }
 }
 
-// get a JSON Web Token from server
 export async function getToken(values) {
   //   const url = "http://0.0.0.0:8000/api/token/";
   // const url = "http://127.0.0.1:8000/api/token/";
@@ -46,7 +45,6 @@ export async function getToken(values) {
   return refreshResponse.data.access;
 }
 
-// GET from API with authentication
 export async function fetchPostsWithToken(url, token) {
   const config = makeConfig(token);
 
@@ -57,7 +55,6 @@ export async function fetchPostsWithToken(url, token) {
   return posts;
 }
 
-// POST to API with authentication
 export async function postWithToken(token, values) {
   const body = {
     author: 3,
@@ -79,7 +76,6 @@ export async function deleteWithToken(id, token) {
   await axios.delete(url, config);
 }
 
-// helper function to handle getting Authorization headers EXACTLY right
 function makeConfig(token) {
   return {
     headers: {
