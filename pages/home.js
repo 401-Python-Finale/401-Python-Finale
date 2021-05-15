@@ -70,12 +70,17 @@ export default function Home({ token, onLogout, username }) {
             className="mx-auto h-32"
           />
           <img
+            src={"/static/images/tailwind.jpg"}
+            alt="custom image"
+            className="mx-auto h-32"
+          />
+          <img
             src={"/static/images/react.png"}
             alt="custom image"
             className="mx-auto h-32"
           />
           <img
-            src={"/static/images/tailwind.jpg"}
+            src={"/static/images/GitHub-logo.jpeg"}
             alt="custom image"
             className="mx-auto h-32"
           />

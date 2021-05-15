@@ -2,21 +2,21 @@ import Link from "next/link";
 
 export default function Header({ username, onLogout, token }) {
   return (
-    <header className="bg-gray p-4 h-32">
+    <header className="mb-8 bg-gray h-32">
       <img
         src={"/static/images/tdtm_logo.png"}
         alt="our logo"
-        className="w-1/6"
+        className="m-4 w-1/6"
       />
       <div className="">
         <img
           src={"/static/images/profile-pic.png"}
           alt="my picture"
-          className="h-20 -mt-10 mr-10 pl-8 rounded-full md:h-48  lg:pl-28 lg:-mt-32  xl:h-52"
+          className="h-20 mr-10 pl-8 rounded-full md:h-48  lg:pl-28 lg:-mt-32  xl:h-52"
         />
       </div>
 
-      <div className="flex justify-evenly">
+      <div className="flex justify-evenly -mt-10">
         <p className=" -mt-20 md:ml-56 lg:ml-80 xl:ml-96  text-lg md:text-2xl  lg:text-2xl xl:text-2xl text-dark-blue">
           {" "}
           Hi, {username}{" "}
