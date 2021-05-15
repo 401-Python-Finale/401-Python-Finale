@@ -1,10 +1,14 @@
 export default function Languages() {
     return (
         <div>
-            <div>
-            <h1>This is language list displays</h1>
+            <div className="text-sm -mt-48 md:text-base lg:text-lg xl:text-xl">
+            <h1 className="text-dark-blue">Languages/Tech</h1>
             <ul>
-                <li>Pulled from profile setup</li>
+                <li>Python</li>
+                <li>JavaScript</li>
+                <li>CSS</li>
+                <li>Django</li>
+
             </ul>
             </div>
         </div>
