@@ -1,7 +1,8 @@
-import { useState } from "react";
-import { getToken } from "../services/data-fetcher";
-import LoginForm from "../components/login";
 
 export default function About() {
-  return <h1>About page</h1>;
+  return (
+    <div className="h-screen">
+      <p className = "mx-auto my-50 text-3xl">About page coming soon!</p>
+    </div>
+  )
 }

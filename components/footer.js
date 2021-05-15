@@ -3,7 +3,6 @@ import Link from "next/link";
 
 export default function Footer() {
   return <footer className = "m-4">
-    {/* Spacer div */}
     <div className="h-12 md:h-28 lg:h-28"></div>
 
     <Link href="about" >

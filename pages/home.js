@@ -3,6 +3,9 @@ import useSWR from "swr";
 import Footer from "../components/footer";
 import Header from "../components/header";
 import PostForm from "../components/post";
+import Languages from "../components/languages";
+import Links from "../components/links";
+import EditButton from "../components/edit-profile-button";
 import Feed from "../components/feed";
 import {
   Post,
@@ -18,16 +21,16 @@ export default function Home({ token, onLogout, username }) {
 
   useEffect(() => {
     if (!data) return;
-    setPosts(data);
+    setPosts(data.reverse());
   }, [data]);
 
-  if (error) return <h2>Ruh Roh</h2>;
+  if (error) return <h2>Something went wrong!</h2>;
   if (!data) return <h2>Loading...</h2>;
 
   async function createHandler(values) {
     const newPost = Post.fromValues(values);
 
-    newPost.post += "..."; // Add the ... to show loading state
+    newPost.post += "..."; 
 
     const updatedPosts = [newPost, ...posts];
 
@@ -45,22 +48,58 @@ export default function Home({ token, onLogout, username }) {
           title="Talk Dev To Me"
           username={username}
           onLogout={onLogout}
+          token={token}
         />
       </div>
-
-      {/* Main Page div */}
+      <div className="h-20"></div>
+      <div className="h-20"></div>
+      <div className="flex justify-evenly">
+          <img
+            src={"/static/images/cf-logo.png"}
+            alt="custom image"
+            className="mx-auto h-32"
+          />
+          <img
+            src={"/static/images/pythonista.png"}
+            alt="custom image"
+            className="mx-auto h-32"
+          />
+          <img
+            src={"/static/images/javascript.png"}
+            alt="custom image"
+            className="mx-auto h-32"
+          />
+          <img
+            src={"/static/images/tailwind.jpg"}
+            alt="custom image"
+            className="mx-auto h-32"
+          />
+          <img
+            src={"/static/images/react.png"}
+            alt="custom image"
+            className="mx-auto h-32"
+          />
+          <img
+            src={"/static/images/GitHub-logo.jpeg"}
+            alt="custom image"
+            className="mx-auto h-32"
+          />
+      </div>
+        
+        <div className="h-20"></div>
       <div className="lg:grid lg:grid-cols-2 xl:grid xl:grid-cols-2">
         <div>
           <PostForm onCreate={createHandler} />
+          <Links />
         </div>
-        <div>
-          <Feed />
+        <div className="">
+          <Feed data={data} />
         </div>
 
         <div className="">
           <Footer />
         </div>
       </div>
-    </div>
+      </div>
   );
 }
